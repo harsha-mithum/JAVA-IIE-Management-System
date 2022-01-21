@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="32d5154c-4c5e-4152-a9f0-306dd732d0d1">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="118"/>
+	<property name="ireport.y" value="470"/>
+	<parameter name="EmpNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     employee.`EmpNo` AS employee_EmpNo,
+     employee.`NIC_No` AS employee_NIC_No,
+     employee.`First_Name` AS employee_First_Name,
+     employee.`Last_Name` AS employee_Last_Name,
+     employee.`DOB` AS employee_DOB,
+     employee.`Address1` AS employee_Address1,
+     employee.`Address2` AS employee_Address2,
+     employee.`Contact_No` AS employee_Contact_No,
+     employee.`Email` AS employee_Email,
+     employee.`Department` AS employee_Department,
+     employee.`Designation` AS employee_Designation,
+     employee.`Educational_Level` AS employee_Educational_Level,
+     employee.`Gender` AS employee_Gender,
+     employee.`Status` AS employee_Status,
+     employee.`Profile_Pic` AS employee_Profile_Pic,
+     employee.`Barcode` AS employee_Barcode
+FROM
+     `employee` employee where employee.`EmpNo`=$P{EmpNo}]]>
+	</queryString>
+	<field name="employee_EmpNo" class="java.lang.String"/>
+	<field name="employee_NIC_No" class="java.lang.String"/>
+	<field name="employee_First_Name" class="java.lang.String"/>
+	<field name="employee_Last_Name" class="java.lang.String"/>
+	<field name="employee_DOB" class="java.lang.String"/>
+	<field name="employee_Address1" class="java.lang.String"/>
+	<field name="employee_Address2" class="java.lang.String"/>
+	<field name="employee_Contact_No" class="java.lang.Integer"/>
+	<field name="employee_Email" class="java.lang.String"/>
+	<field name="employee_Department" class="java.lang.String"/>
+	<field name="employee_Designation" class="java.lang.String"/>
+	<field name="employee_Educational_Level" class="java.lang.String"/>
+	<field name="employee_Gender" class="java.lang.String"/>
+	<field name="employee_Status" class="java.lang.String"/>
+	<field name="employee_Profile_Pic" class="java.io.InputStream"/>
+	<field name="employee_Barcode" class="java.io.InputStream"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="129" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="124" forecolor="#000000" backcolor="#F5F5DC" uuid="c5c2c887-c1e9-4e13-bbcd-eb1bc7e6b383"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="dd-MMM-yyyy">
+				<reportElement x="443" y="11" width="100" height="20" uuid="cb276aff-00eb-491e-80a1-c72a007268ae"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="443" y="31" width="100" height="20" uuid="29dcf288-7f30-44bf-8f33-6cadee247c33"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="114" y="0" width="266" height="35" uuid="aae6199f-03d7-4ab8-b573-e1163238391a"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr Bio Foods Products]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="11" width="74" height="24" uuid="d32dbef3-a7d1-414e-b5cc-50c382c53f05"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(PVT),Ltd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="35" width="288" height="20" uuid="184dd531-909f-4ab9-ae72-451ca7f281e8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[No.190, Lawulupitiya, Wathurugama, Gampaha, Sri Lanka.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="55" width="208" height="20" uuid="c4e6c8cd-720a-4c28-a4f0-177c215a9b06"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Tel : +94 71 18 63 408 , +94 33 22 77 966]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="75" width="100" height="20" uuid="eb14f7e1-3e48-49d7-b13f-fac26f3c53c7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[www.srbiofood.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="17" y="11" width="80" height="95" uuid="3c78dde8-91c3-41cd-9f29-a70716610757"/>
+				<imageExpression><![CDATA["D:\\project\\system development project\\SR1.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="214" y="95" width="148" height="23" uuid="68f68c42-2e46-4c72-b1be-e7a0a98ba1a9"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="418" y="67" width="125" height="51" uuid="0492f706-f64c-41dd-b71f-7410fb13981e"/>
+				<imageExpression><![CDATA[$F{employee_Barcode}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="124" width="555" height="1" uuid="b3d508c4-e214-40cc-8484-8ba24b19e2ab"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="113" splitType="Stretch">
+			<image>
+				<reportElement x="18" y="0" width="97" height="110" uuid="f58b483c-1112-47d8-ba9c-93fbd6440e6d"/>
+				<imageExpression><![CDATA[$F{employee_Profile_Pic}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="522">
+			<rectangle>
+				<reportElement x="0" y="433" width="555" height="22" uuid="1d16d455-36cb-40e3-9f04-772373786532"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="394" width="555" height="22" uuid="8c13ab02-2fab-4122-bc10-50e87e4ec288"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="322" width="555" height="22" uuid="f395b216-e1af-4c8b-a8e1-de184bdfb646"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="358" width="555" height="22" uuid="ea74bf37-4a9d-4eb4-8ab8-0a16e8a02af7"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="470" width="555" height="22" uuid="2864ccf3-a7a2-4919-8fc9-17c2fc057112"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="286" width="555" height="22" uuid="bd32a87a-12a4-483a-bf9e-97da408c13b3"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="179" width="555" height="22" uuid="1c01b055-d336-41d7-bb95-8bed14152e19"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="141" width="555" height="22" uuid="07f30eb6-60a2-4e68-bf5b-c56627ccc006"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="250" width="555" height="22" uuid="ff2d2fe3-2a68-4326-b006-f1e3a5c04e35"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="214" width="555" height="22" uuid="eced4586-de2c-461c-af2a-75c00e5fbfd7"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="106" width="555" height="22" uuid="97a4b3e8-d4f2-48c5-9813-c418b5848b9e"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="71" width="555" height="22" uuid="b662a6ef-f3dd-4fb9-8da8-e2b0a3ad11ba"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="2" width="555" height="22" uuid="7f08a8ef-2d2c-4404-8dae-a8a3c454a021"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="37" width="555" height="22" uuid="fb2e8c46-3e6c-4fbe-bff7-3d57ffc22e34"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="320" y="106" width="200" height="20" uuid="4b8347c5-f802-49c9-9112-f5e66d313465"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_Last_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="141" width="200" height="20" uuid="f177df42-acf7-45f4-8a91-9ef3d1a76b58"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_DOB}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="179" width="200" height="20" uuid="10f7a6aa-d6cf-4b61-bb43-644ab30a350a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_Address1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="214" width="200" height="20" uuid="4fc3433d-8e4e-4ef8-aa22-475057f62786"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_Address2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="250" width="200" height="20" uuid="8ef5d49f-3cd9-462e-badf-faad0d1ad986"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_Contact_No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="286" width="200" height="20" uuid="4bbe762f-e819-4009-9fd8-ff518ba185e9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="322" width="200" height="20" uuid="37f007d2-d8dd-4610-8a59-125fa1380695"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_Department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="358" width="200" height="20" uuid="55653758-d7d0-4be9-a5b6-04db3c648723"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_Designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="394" width="200" height="20" uuid="253a4dfb-c67e-4271-800b-8d409231d2be"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_Educational_Level}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="179" width="126" height="20" uuid="1be85fbc-0199-441a-a201-930a1e742d31"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="107" width="126" height="20" uuid="5f4efc11-2eab-4be4-b191-8bf5814142f4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="141" width="126" height="20" uuid="3518ce7b-8e0b-4e7b-ba6c-3f0ea25860b2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="358" width="126" height="20" uuid="6f5d2212-3ff7-4b5b-b90b-ba9840d6e7c5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="286" width="126" height="20" uuid="eddb7f35-9720-43d3-949e-4a7eac6c6be4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="394" width="167" height="20" uuid="865d157d-272e-46df-a1fd-cd958622a5ac"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Educational Level]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="214" width="126" height="20" uuid="9376e682-ef38-4558-9761-4f9d6b56974f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="250" width="150" height="20" uuid="03b69859-110d-498c-97ce-fddaa498527e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="322" width="126" height="20" uuid="bb326765-d2f6-4c36-9dbf-41b27b901c69"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="214" width="20" height="20" uuid="5dde8776-6965-4cae-a205-69c987417e73"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="179" width="20" height="20" uuid="d45a937d-18be-4dfa-b065-328766ee0441"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="250" width="20" height="20" uuid="d358deee-002b-4364-8638-8023b68a9f1b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="358" width="20" height="20" uuid="e575eee1-af0f-403e-bc50-49b789c7a377"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="286" width="20" height="20" uuid="92504ad4-f84d-4fb7-925f-7dbaa5bf170b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="141" width="20" height="20" uuid="d0502f2e-768e-4e53-9deb-de2d941198b6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="322" width="20" height="20" uuid="f088d733-ee7a-4105-a3b1-985e2fd0b943"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="394" width="20" height="20" uuid="65726ae4-db25-4734-8a34-03861e31ce01"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="107" width="20" height="20" uuid="ff1e1b8f-e6fe-4e0c-8123-d22d7f9b5109"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="433" width="200" height="20" uuid="6c4ac864-7472-40d5-88d1-f3a0964e1f3f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_Gender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="431" width="126" height="20" uuid="801ffb7e-3b31-46d8-9434-6defdda4de3d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="431" width="20" height="20" uuid="45bc930b-49eb-4912-a324-24d19cebe67a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="472" width="200" height="20" uuid="9421f385-0437-4d7b-aea1-8779b92f0ec4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_Status}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="154" y="470" width="20" height="20" uuid="2b266010-dde5-433d-a41c-21cfb9a72b5f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="470" width="126" height="20" uuid="fc321111-871a-41a3-9e29-85013578f128"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="2" width="200" height="20" uuid="6d6d09d9-3821-449b-a9f4-ca3d7381bf7c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_EmpNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="154" y="2" width="20" height="20" uuid="e7606b84-a0d3-4980-a314-339668cb7673"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="2" width="126" height="20" uuid="24fed89d-9202-4c42-8a44-8cb3f1a9a0b0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="37" width="20" height="20" uuid="01850bae-6d63-4d9b-baff-307809aa152c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="73" width="20" height="20" uuid="32bf8caa-8280-4543-bffc-80535bd09c9d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="71" width="126" height="20" uuid="054c3ad6-b1f0-4f7f-9018-7c3e4b07f4ad"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="37" width="126" height="20" uuid="d132c560-8e1d-43c2-aaba-94de4b9f8f56"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIC Number]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="71" width="200" height="20" uuid="85df01c9-86ed-4987-a3cf-7d26ff86a633"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_First_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="37" width="200" height="20" uuid="b4f833b8-fe4f-4b5b-9620-6f4f65c6372b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_NIC_No}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="27" backcolor="#F5F5DC" uuid="0a13e7e3-4874-4f1f-8ac0-e33abbf09739"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="237" y="7" width="100" height="20" uuid="9cd659c9-2b99-40c0-a162-58d598e7e653"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="7" width="115" height="20" uuid="fb91693b-ebfb-4e57-bf22-12b0f8cda0db"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Sr Bio Foods Products]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
